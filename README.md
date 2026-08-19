@@ -4,6 +4,12 @@ Single Page Application (SPA) built with Angular and Bootstrap to manage a web-b
 
 ---
 
+## 🚀 Enlaces en Producción (Demo en Vivo)
+* **Frontend (Vercel):** [Ver Aplicación en Vivo](https://phonebook-frontend-amber.vercel.app)
+* **Backend API (Render):** [Documentación Swagger / API](https://agendabackend-p9qp.onrender.com/swagger/index.html)
+
+---
+
 ## 📌 Features & Functional Requirements
 
 * **Dynamic Data Grid:** Displays contacts with columns for Contact Type, Name, Phone Number, Comments, Custom Extra Fields, and Action Buttons (Edit/Delete).
@@ -67,12 +73,10 @@ npm install
 ```
 
 ### 3. API Base URL Configuration
-Ensure the API service (`src/app/services/contact.service.ts`) points to your local ASP.NET Core backend URL (e.g., `https://localhost:5001/api` or `http://localhost:5000/api`).
+Ensure the API service (`src/app/services/contact.service.ts`) points to your ASP.NET Core backend URL (e.g., your live Render backend URL or local API endpoint).
 
-### 4. Start Development Server
+### 4. Run the Application
 ```bash
 ng serve
 ```
-
-### 5. Open in Browser
-Navigate to **`http://localhost:4200/`** in your web browser to view the application live.
+Open `http://localhost:4200` in your web browser.
