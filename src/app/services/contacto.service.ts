@@ -7,7 +7,7 @@ import { Contacto } from '../models/contacto.model';
   providedIn: 'root'
 })
 export class ContactoService {
-  private apiUrl = 'http://localhost:5117/api/Contactos';
+  private apiUrl = 'https://agendabackend-p9qp.onrender.com/api/Contactos';
 
   constructor(private http: HttpClient) {}
 
