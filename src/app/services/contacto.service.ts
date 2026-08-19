@@ -7,7 +7,7 @@ import { Contacto } from '../models/contacto.model';
   providedIn: 'root'
 })
 export class ContactoService {
-  private apiUrl = 'https://phonebook-backend-ensr.onrender.com/api/Contactos';
+  private apiUrl = 'http://localhost:5117/api/Contactos';
 
   constructor(private http: HttpClient) {}
 
