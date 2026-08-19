@@ -1,59 +1,78 @@
-# AgendaFrontend
+# 📱 PhoneBook Client - Frontend (Angular)
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.21.
+Single Page Application (SPA) built with Angular and Bootstrap to manage a web-based phone book. It connects to the ASP.NET Core REST API to perform real-time contact filtering, creation, modification, and deletion.
 
-## Development server
+---
 
-To start a local development server, run:
+## 📌 Features & Functional Requirements
 
+* **Dynamic Data Grid:** Displays contacts with columns for Contact Type, Name, Phone Number, Comments, Custom Extra Fields, and Action Buttons (Edit/Delete).
+* **Multi-Type Filtering:** Top checkboxes allow users to display any combination of contact types (Person, Public Organization, Private Organization).
+* **Modal Dialogs (ng-bootstrap):**
+  * **Add / Edit Modal:** Dynamic form supporting both standard inputs and contact-type-specific fields.
+  * **Delete Confirmation Modal:** Prompts `"Are you sure you want to delete selected records?"` with **Yes** / **No** actions.
+* **No Server-Side Rendering (SSR):** Fully client-rendered Single Page Application.
+* **Responsive Styling:** Styled using Bootstrap for clean, mobile-friendly layouts.
+
+---
+
+## 🛠️ Tech Stack & Libraries
+
+* **Angular (17+):** TypeScript-based framework for scalable SPA development.
+* **Bootstrap 5:** UI framework for layout grid and utility styling.
+* **ng-bootstrap:** Native Angular widgets for modal dialogs and interactive components.
+* **RxJS:** Reactive programming for HTTP requests and event handling.
+
+---
+
+## 🗂️ Project Structure
+
+```text
+AgendaFrontend/
+├── src/
+│   ├── app/
+│   │   ├── components/      # UI components (Contact Grid, Add/Edit Modal, Delete Modal)
+│   │   ├── models/          # TypeScript interfaces (Contact, ContactType DTOs)
+│   │   ├── services/        # HTTP services to interact with .NET API
+│   │   ├── app.ts           # Root component
+│   │   └── app.module.ts    # Module configuration & imports
+│   ├── assets/              # Static assets and global styles
+│   └── index.html           # Main HTML entry point
+├── angular.json             # Angular CLI workspace configuration
+└── package.json             # Dependencies and npm scripts
+```
+
+---
+
+## 📋 Prerequisites
+
+Make sure you have installed:
+* [Node.js](https://nodejs.org/) (v18 or higher recommended)
+* [npm](https://www.npmjs.com/) (installed automatically with Node.js)
+* [Angular CLI](https://angular.io/cli) (`npm install -g @angular/cli`)
+
+---
+
+## ⚙️ Installation & Running the Frontend
+
+### 1. Switch to the Frontend Branch
+```bash
+git checkout AgendaFrontend
+cd AgendaFrontend
+```
+
+### 2. Install Dependencies
+```bash
+npm install
+```
+
+### 3. API Base URL Configuration
+Ensure the API service (`src/app/services/contact.service.ts`) points to your local ASP.NET Core backend URL (e.g., `https://localhost:5001/api` or `http://localhost:5000/api`).
+
+### 4. Start Development Server
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
-
-```bash
-ng generate --help
-```
-
-## Building
-
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+### 5. Open in Browser
+Navigate to **`http://localhost:4200/`** in your web browser to view the application live.
